@@ -1,0 +1,313 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+        
+        body {
+        margin: 0;
+        overflow: hidden;
+        /*font-family: sans-serif;*/
+        font-family: Arial, sans-serif;
+        }
+
+        #btnTrocar {
+        position: absolute;
+        top: 155px;
+        left: 20px;
+        padding: 10px 20px;
+        background-color: #28b94a;
+        border: none;
+        font-size: 16px;
+        border-radius: 12px;
+        z-index: 10;
+        cursor: pointer;
+        }
+
+        #btnTrocar:hover {
+        /*background-color: #4682b4;*/
+        background-color: #19ec47;
+        }
+
+        /*part título jogo inicio*/
+
+            #topo {
+        position: absolute;
+        top: -12px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        z-index: 10;
+        }
+
+        #tituloWave {
+        display: flex;
+        gap: 2px;
+        font-size: 4.5vw;
+        font-weight: bold;
+        font-family: 'Arial', sans-serif;
+        position: relative;
+        color: #ff1e00;
+        text-shadow: 0 0 5px rgb(88, 160, 255), 0 0 10px #0ff, 0 0 20px #0ff;
+        }
+
+        #tituloWave span {
+        display: inline-block;
+        animation: waveEffect 3.0s infinite ease-in-out;
+        animation-delay: calc(0.1s * var(--i));
+        color: #ff1e00;
+        text-shadow: 0 0 5px rgb(88, 160, 255), 0 0 10px #0ff, 0 0 20px #0ff;
+        /*text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;*/
+        }
+
+        /* Letra flutuando em onda */
+        @keyframes waveEffect {
+        0%, 100% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+        }
+        /*part título jogo fim*/
+        /*parte do botão trocar cena inicio*/
+    #btnCena {
+    position: absolute;
+    top: 370px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #0077ff;
+    border: none;
+    font-size: 16px;
+    border-radius: 12px;
+    z-index: 10;
+    cursor: pointer;
+    }
+
+    #btnCena:hover {
+    background-color: #00aaff;
+    }
+
+        /* Botão circular */
+
+        /*parte do botão trocar cena fim*/
+        /*parte texto do fundo innicio*/
+        #textoInferior {
+    position: absolute;
+    bottom: 25vw;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    text-shadow: 0 0 8px #000;
+    z-index: 5;
+    }
+        /*parte texto do fundo fím*/
+
+        /*parte da midia queries aparelhos inicio*/
+        /* === TELAS EXTRA GRANDES (TVs 4K e monitores >1600px) === */
+    @media (min-width: 1600px) {
+    #tituloWave {
+        font-size: 4.5vw; /* Escala com a largura da tela */
+    }
+
+    #btnTrocar {
+        font-size: 1.2vw;
+        padding: 1vw 1.5vw;
+    }
+
+        #btnCena {
+        font-size: 1.2vw;
+        padding: 1vw 1.5vw;
+    }
+
+            #textoInferior {
+    position: fixed;
+    bottom: 1vw;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    text-shadow: 0 0 8px #000;
+    z-index: 5;
+    }
+    }
+
+    /* === NOTEBOOKS E DESKTOPS MÉDIOS (1025px a 1599px) === */
+    @media (min-width: 1025px) and (max-width: 1599px) {
+    #tituloWave {
+        font-size: 4vw;
+    }
+
+    #btnTrocar {
+        top: 20vw;
+        font-size: 1.5vw;
+        padding: 0.8vw 1.8vw;
+    }
+
+    #btnCena {
+        top: 20vw;
+        font-size: 1.5vw;
+        padding: 0.8vw 1.8vw;
+    }
+
+            #textoInferior {
+    position: fixed;
+    bottom: 1vw;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    text-shadow: 0 0 8px #000;
+    z-index: 5;
+    }
+    }
+
+    /* === TABLETS EM MODO PAISAGEM === */
+    @media (min-width: 767px) and (max-width: 1024px) and (orientation: landscape) {
+    #tituloWave {
+        font-size: 4.5vw;
+    }
+
+    #btnTrocar {
+        position: absolute;
+        top: 26vw;
+        font-size: 2.0vw;
+        padding: 1.6vw 2.5vw;
+        
+    }
+
+        #btnCena {
+        position: absolute;
+        top: 26vw;
+        font-size: 2.0vw;
+        padding: 2vw 1vw;
+    }
+
+            #textoInferior {
+    position: fixed;
+    bottom: 1vw;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    text-shadow: 0 0 8px #000;
+    z-index: 5;
+    }
+    }
+
+    /* === TABLETS EM MODO RETRATO === */
+    @media (min-width: 600px) and (max-width: 885px) and (orientation: portrait) {
+    #tituloWave {
+        top: -4vw;
+        font-size: 9vw;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #btnTrocar {
+        position: absolute;
+        top: 28vw;
+        font-size: 2.5vw;
+        padding: 2vw 1vw;
+    }
+
+    #btnCena {
+        top: 28vw;
+        font-size: 2.5vw;
+        padding: 2vw 1vw;
+    }
+
+            #textoInferior {
+    position: fixed;
+    bottom: 1vw;
+    width: 100%;
+    text-align: center;
+    font-size: 29px;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    text-shadow: 0 0 8px #000;
+    z-index: 5;
+    }
+    }
+
+    /* === CELULARES EM PAISAGEM === */
+    @media (max-width: 931px) and (orientation: landscape) {
+    #tituloWave {
+        font-size: 4vw;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #btnTrocar {
+        top: 10vw;
+        font-size: 2.1vw;
+        padding: 2vw 1w;
+        
+    }
+
+        #btnCena {
+        top: 10vw;
+        font-size: 2.1vw;
+        padding: 2vw 1vw;
+    }
+
+        #textoInferior {
+        position: fixed;
+        bottom: 1vw;
+        width: 100%;
+        text-align: center;
+        font-size: 15px;
+        font-family: 'Poppins', sans-serif;
+        color: #ffffff;
+        text-shadow: 0 0 8px #000;
+        z-index: 5;
+    }
+    }
+
+
+
+    /* === CELULARES EM RETRATO === */
+    @media (max-width: 599px) and (orientation: portrait) {
+    #tituloWave {
+        font-size: 9.0vw;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #btnTrocar {
+        font-size: 4.5vw;
+        padding: 2.5vw 2.5vw;
+        top: 26vw;
+        left: 6vw;
+    }
+
+    #btnCena {
+        top: 25.5vw;
+        
+    }
+
+        #textoInferior {
+    position: fixed;
+    bottom: 1vw;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    text-shadow: 0 0 8px #000;
+    z-index: 5;
+    }
+    }
+
+        /*parte da midia queries aparelhos fim*/
